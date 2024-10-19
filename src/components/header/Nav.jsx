@@ -3,6 +3,7 @@ import NavMenu from "./NavMenu";
 import Drawer from "./Drawer";
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
+import LgNavItem from "./LgNavItem";
 
 export default function Nav() {
   return (
@@ -16,7 +17,10 @@ export default function Nav() {
       {/* dropdown navbar menu for medium and small devices */}
       <NavMenu />
 
-      <div className=" flex items-center gap-6 ">
+      <LgNavItem />
+
+      {/* for large device */}
+      <div className=" hidden lg:flex items-center gap-6 ">
         <p className=" text-2xl text-gray-400 flex items-center gap-5 ">
           <CiSearch />
 
