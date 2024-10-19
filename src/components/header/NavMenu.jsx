@@ -11,7 +11,7 @@ export default function NavMenu() {
     <motion.div
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className=" "
+      className="block lg:hidden "
     >
       <MenuToggle toggle={() => toggleOpen()} />
 
