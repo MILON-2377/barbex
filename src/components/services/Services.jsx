@@ -16,12 +16,12 @@ export default function Services() {
       </div>
 
       {/* content section */}
-      <div className=" lg:w-[50%] lg:px-0 lg:mt-[30vh] font-arima sm:px-24 flex flex-col gap-5 ">
+      <div className=" mt-10 lg:w-[50%] lg:px-0 lg:mt-[30vh] font-arima sm:px-24 flex flex-col gap-5 ">
         <div className=" relative ">
           <p className=" relative z-10 text-xl sm:text-2xl font-[800] text-[#B48E40] ">
             Our Services
           </p>
-          <p className=" absolute -top-10 text-[90px] lg:text-[120px] opacity-5 ">SERVICES</p>
+          <p className=" absolute -top-5 sm:-top-10 text-[50px] sm:text-[90px] lg:text-[120px] opacity-5 ">SERVICES</p>
         </div>
         <p className=" lg:w-[70%] text-3xl sm:text-5xl font-[600] leading-[40px] sm:leading-[60px] ">
           Popular Hair Cutting and salon
