@@ -3,9 +3,9 @@ import Button from "../buttons/Button";
 
 export default function Content() {
   return (
-    <div className=" w-full lg:w-[45vw] ml-20 ">
+    <div className=" w-full lg:w-[45vw] ml-0 lg:ml-20 ">
       <p className=" text-xl text-[#B48E40] ">Wlcome to Our Barbex</p>
-      <p className=" text-7xl mt-8 text-[#0F1212] leading-[100px] font-extrabold ">
+      <p className=" text-3xl sm:text-6xl lg:text-7xl mt-8 text-[#0F1212] leading-[50px] sm:leading-[100px] font-extrabold ">
         We offer hair loss Solutions
       </p>
 
