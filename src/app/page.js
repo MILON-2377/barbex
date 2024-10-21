@@ -1,5 +1,6 @@
 import AboutUs from "@/components/about-us/AboutUs";
 import Banner from "@/components/banner/Banner";
+import Blog from "@/components/blog/Blog";
 import Services from "@/components/services/Services";
 import Team from "@/components/team/Team";
 import Testimonial from "@/components/testimonial/Testimonial";
@@ -14,5 +15,6 @@ export default function Home() {
     <WorkingTime />
     <Team />
     <Testimonial />
+    <Blog />
   </div>;
 }
