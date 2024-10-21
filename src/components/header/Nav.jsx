@@ -17,6 +17,7 @@ export default function Nav() {
       {/* dropdown navbar menu for medium and small devices */}
       <NavMenu />
 
+      {/* for large device */}
       <LgNavItem />
 
       {/* for large device */}
