@@ -45,60 +45,61 @@ export default function TeamSlider({ refCon }) {
       {/* Slider Images */}
       <Slider ref={refCon} {...settings}>
         {teamImages.map((item, idx) => (
-          <div
-            key={idx}
-            className="relative"
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <Image
-              src={item.img}
-              alt={item.title}
-              className="w-full h-[36vh] sm:h-[50vh] object-cover"
-            />
-            {/* Background Overlay */}
-            <motion.div
-              className={`absolute inset-0 bg-black z-0 ${
-                hoveredIndex === idx ? "block" : "hidden"
-              }`}
-              initial={{ y: "-200%", opacity: 0 }}
-              animate={
-                hoveredIndex === idx
-                  ? { y: 0, opacity: 0.5 }
-                  : { y: "-200%", opacity: 0 }
-              }
-              transition={{ duration: 0.7 }}
-            />
-            {/* Content that appears on hover */}
-            <motion.div
-              className={`absolute bottom-0 left-0 right-0 z-10 p-4 bg-white text-slate-700`}
-              initial={{ y: "100%", opacity: 0 }}
-              animate={
-                hoveredIndex === idx
-                  ? { y: 0, opacity: 1 }
-                  : { y: 0, opacity: 1 }
-              }
-              transition={{ duration: 1 }}
+          <div key={idx + item.title + 2}>
+            <div
+              className="relative"
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <h2 className="text-lg font-bold text-center">{item.name}</h2>
-              <p className="text-center text-slate-700">Barber</p>
-
-              {/* Extra content that appears on hover */}
+              <Image
+                src={item.img}
+                alt={item.title}
+                className="w-full h-[36vh] lg:w-[95%] border border-gray-300 sm:h-[50vh] object-cover"
+              />
+              {/* Background Overlay */}
               <motion.div
-                className={`text-center ${
+                className={`absolute inset-0 lg:w-[95%] bg-black z-0 ${
                   hoveredIndex === idx ? "block" : "hidden"
                 }`}
-                initial={{ opacity: 0, translateY: 10 }}
+                initial={{ y: "-200%", opacity: 0 }}
                 animate={
                   hoveredIndex === idx
-                    ? { opacity: 1, translateY: 0 }
-                    : { opacity: 0, translateY: 10 }
+                    ? { y: 0, opacity: 0.5 }
+                    : { y: "-200%", opacity: 0 }
+                }
+                transition={{ duration: 0.7 }}
+              />
+              {/* Content that appears on hover */}
+              <motion.div
+                className={`absolute bottom-0 left-0 lg:w-[95%] right-0 z-10 p-4 bg-white text-slate-700`}
+                initial={{ y: "100%", opacity: 0 }}
+                animate={
+                  hoveredIndex === idx
+                    ? { y: 0, opacity: 1 }
+                    : { y: 0, opacity: 1 }
                 }
                 transition={{ duration: 1 }}
               >
-                <p>Additional content goes here.</p>
+                <h2 className="text-lg font-bold text-center">{item.name}</h2>
+                <p className="text-center text-slate-700">Barber</p>
+
+                {/* Extra content that appears on hover */}
+                <motion.div
+                  className={`text-center ${
+                    hoveredIndex === idx ? "block" : "hidden"
+                  }`}
+                  initial={{ opacity: 0, translateY: 10 }}
+                  animate={
+                    hoveredIndex === idx
+                      ? { opacity: 1, translateY: 0 }
+                      : { opacity: 0, translateY: 10 }
+                  }
+                  transition={{ duration: 1 }}
+                >
+                  <p>Additional content goes here.</p>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         ))}
       </Slider>
